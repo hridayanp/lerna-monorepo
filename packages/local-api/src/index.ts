@@ -1,5 +1,12 @@
+import express from 'express';
+
 export const serve = (port: number, filename: string, dir: string) => {
-  console.log('serving on port', port);
-  console.log('saving/fetching cells from', filename);
-  console.log('that file is in dir', dir);
+  const app = express();
+
+  // app.use(express.static(dir));
+
+  return new Promise<void>((resolve, reject) => {
+    console.log('Listening on port', port);
+    app.listen(port, resolve).on('error', reject);
+  });
 };
