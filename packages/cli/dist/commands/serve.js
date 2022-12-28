@@ -26,6 +26,7 @@ exports.serveCommand = new commander_1.Command()
     };
     try {
         yield (0, local_api_1.serve)(parseInt(options.port), path_1.default.basename(filename), path_1.default.join(process.cwd(), path_1.default.dirname(filename)));
+        console.log(`Opened ${filename}. Navigate to http://localhost:${options.port} to edit the file.`);
     }
     catch (err) {
         if (isLocalApiError(err)) {
