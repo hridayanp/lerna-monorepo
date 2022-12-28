@@ -1,0 +1,18 @@
+.cell-list {
+  margin: 0 25px 50vh;
+}
+
+.react-draggable-transparent-selection .cell-list-item {
+  margin-bottom: 100vh;
+}
+
+.cell-list-item {
+  position: relative;
+  /* margin: 40px 10px; */
+}
+
+.action-bar-wrapper {
+  height: 30px;
+  width: 100%;
+  background-color: #37414b;
+}
