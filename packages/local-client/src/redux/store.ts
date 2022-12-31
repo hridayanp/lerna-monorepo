@@ -1,9 +1,14 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
+import { persistMiddleware } from './middleware/presistMiddleware';
 // import { ActionTypes } from './action-types';
 
-export const store = createStore(reducers, {}, applyMiddleware(thunk));
+export const store = createStore(
+  reducers,
+  {},
+  applyMiddleware(thunk, persistMiddleware)
+);
 
 //TESTING REDUX
 // store.dispatch({
